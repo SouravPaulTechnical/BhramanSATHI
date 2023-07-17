@@ -3,6 +3,8 @@ let searchBar=document.querySelector('.search-bar-container');
 let loginBtn=document.querySelector('#login-btn');
 let loginForm=document.querySelector('.login-form-container');
 let loginClose=document.querySelector('#form-close');
+let menuBar=document.querySelector('#menubar');
+let navBar=document.querySelector('.navbar');
 
 window.onscroll=()=>{
     searchBtn.classList.remove('fa-times');
@@ -20,3 +22,10 @@ loginBtn.addEventListener('click',()=>{
 loginClose.addEventListener('click',()=>{
     loginForm.classList.remove('active');
 });
+
+menuBar.addEventListener('click',()=>{
+    menuBar.classList.toggle('fa-times');
+    navBar.classList.toggle('active');
+});
+
+//header section JS ends here

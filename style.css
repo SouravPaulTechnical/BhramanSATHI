@@ -23,6 +23,9 @@ html{
     scroll-padding-top: 6rem;
     scroll-behavior: smooth;
 }
+section{
+    padding: 1.5rem 9%;
+}
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -169,4 +172,78 @@ header .search-bar-container label:hover{
     position: absolute;
     top: 2rem; right: 3rem;
     cursor: pointer;
+}
+#menubar{
+    color: #fff;
+    padding: .5rem 1.2rem;
+    border: 1px solid #fff;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 3rem;
+}
+/* header section ends here */
+
+/* home section starts here */
+.home{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+}
+.home .content{
+    text-align: center;
+}
+.home .content h3{
+    font-size: 4.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+}
+.home .content p{
+    font-size: 2.5rem;
+    color: #fff;
+    padding: .5rem 0;
+}
+
+/* code for media queries */
+@media(max-width:1200px){
+    html{
+        font-size: 50%;
+    }
+}
+@media(max-width:991px){
+    header{
+        padding: 2rem;
+    }
+}
+@media(max-width:768px){
+    #menubar{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background:var(--blue);
+        border-top: .1rem solid #666;
+        padding: 1rem 2rem;
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);  
+    }
+    header .navbar a{
+        display: block;
+        border-radius: .5rem;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        background: #098cc0
+    }
+}
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
 }
